@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Buda:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <style>
+    @keyframes conteudo {
+      from{opacity: 0;}
+      to{opacity: 1;}
+    }
+
+    body {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;  
+      display: flex;
+      justify-content: center;
+      background: rgb(154,225,255);
+      background: linear-gradient(0deg, rgba(154,225,255,1) 0%, rgba(0,57,94,1) 100%) fixed;
+    }
+    
+    .quadro{
+      padding: 0px;
+      margin: 70px 0px;
+      width: 85vw;      
+
+    }
+    .lateral{
+      background: rgb(225,246,252);
+      background: linear-gradient(87deg, rgba(225,246,252,0.1) 0%, rgba(154, 225, 255, 0.8) 49%, rgba(233,246,251,0.1) 100%);
+      position: relative;
+      border-width:2px;
+      float: left;
+      width: 20vw;
+      height: auto;
+    }
+    .lateral .cabecalho{
+      color: white;
+      position: relative;
+      padding: 20px;
+      text-align: center;
+    }
+    .lateral .cabecalho img{
+      width: 80%;
+      height: auto;
+      border-radius: 50%;   
+    }
+    .lateral .cabecalho h1{
+      font-family: 'Contrail One';
+      font-size: 40px;
+      text-shadow: 2px 2px 2px #007db1;
+    }
+    .lateral .cabecalho h3{
+      font-family: 'Buda';
+      font-style: italic;
+      font-weight: 1000;
+      font-size: 30px;
+      text-shadow: 2px 2px 2px #007db1;
+    }
+    .lateral .cabecalho h4{
+      font-family: 'Buda';
+      font-style: italic;
+      font-size: 20px;
+      text-shadow: 2px 2px 2px #007db1;
+    }
+    .conteudo{
+      padding: 0px;
+      width: 65vw;
+      border-width:2px;
+      opacity: 1;
+      background: rgb(154,225,255);
+      background: linear-gradient(0deg, rgba(154,225,255,1) 0%, rgba(0,57,94,1) 100%) fixed;
+      border-radius: 10px;
+      border: solid white;
+      border-width: 0 2px;
+      float: right;
+      color: white;
+      text-shadow: 2px 2px 2px #007db1;
+      transition: opacity 1s ease-in-out;
+    }
+    .conteudo h1{
+      animation-name: conteudo;
+      animation-duration: 2s;
+      font-family: 'Buda';
+    }
+    .conteudo h3, p, ul, li{
+      animation-name: conteudo;
+      animation-duration: 3s;
+    }
+    .conteudo .sobre{
+      margin-top: 20px;
+      padding: 0px;
+      margin: 20px;
+      text-align: center;
+      font-size: larger;
+    }
+    .conteudo .experiencias{
+      margin-top: 20px;
+      padding: 0px;
+      text-align: center;
+      font-size: larger;
+    }
+    ul li{
+      text-align: justify;
+    }
+
+    .conteudo .escolaridade{
+      margin-top: 20px;
+      padding: 0px;
+      text-align: center;
+    }
+
+    button{
+      display: block;
+      width: 100%;
+      transition: font-size 1s;
+      margin: 0;
+      padding: 0;
+      font-family: 'Baloo Da';
+      font-size: large;
+      color: white;
+      background: rgb(225,246,252);
+      background: linear-gradient(87deg, rgba(225,246,252,0.1) 0%, rgba(154, 225, 255, 0.8) 49%, rgba(233,246,251,0.1) 100%);
+      text-shadow: 2px 2px 2px #007db1;
+      border: none;
+      height: 5vh;
+    }
+
+    button:hover{
+      font-size: larger;
+    }
+
+
+
+  </style>
+
+             
+</head>
+<body>
+  
+  <div class="quadro">
+    <div class="lateral w3-center w3-animate-left">
+      <div class="cabecalho ">
+        <img src="eu.jpg" width="200" height="200">
+        <h1>Dailon Petersen</h1>
+        <h3>Analista de TI em Getnet e viciado em café</h3>
+        <h4>fernandodailon@gmail.com</h4>
+        <h4>(51)99553-0388</h4>
+      </div>
+
+      <div class="botoes">
+        <button onclick="ShowExperiencias()">Experiencias Profissionais</button>
+        <button onclick="ShowEscolaridade()">Escolaridade</button>
+        <button onclick="ShowSobre()">Sobre</button>
+      </div>
+    </div>
+
+    <div class="conteudo">
+      <div class="sobre" id="sobre">
+        <h1 class="">Sobre mim</h1>
+        <p  class="">
+          Nascido e criado em Campo Bom - RS,com 22 anos sou o caçula de duas irmãs, estudante de escola publica, me formei em Análise e Desenvolvimento de Sistemas pela Faculdade Ftec - Novo Hamburgo.
+        </p>
+      </div>
+    
+      <div class="escolaridade" id="escolaridade">
+        <h1 class="">Análise e Desenvolvimento de Sistemas</h1>
+        <h3 class="">Ftec Faculdades Novo Hamburgo - 2017/2 a 2020/2</h3>
+      </div>
+    
+      <div class="experiencias" id="experiencias">
+        <div class="exp">
+            <h1 class="">Jovem Aprendiz</h1>
+            <h3 class="">Getnet - Out/2014 a Jan/2016</h3>
+          <p class="">
+            Jovem Aprendiz na área de Planejamento da Central de Relacionamento Toque Fale, auxiliando no controle de EPI's, também como outras demandas de manutenção de base de dados e chamados de manutenção
+            da infraestrutura.
+          </p>
+        </div>
+    
+        <div class="exp">
+          <h1>Agente de Call Center</h1>
+          <h3>Toque Fale - Getnet Jan/2017 a Mai/2018</h3>
+          <p>
+            Atuando na área financeira, manutenção técnica de POS, atendimento via chat, atendente de Gerentes Jurídicos Santander e atendimento diferenciado de grandes clientes.
+          </p>
+        </div>  
+    
+        <div class="exp">
+          <h1>Assistente de Backoffice Técnico</h1>
+          <h3>Toque Fale - Getnet Jun/2018 a Nov/2019</h3>
+          <ul>
+            <li>Ecommerce: Suporte à Plataforma Digital Getnet. Atuando como suporte técnico aos desenvolvedores. Dispomos de uma solução de pagamento completa, oferecida através de integração via API REST e WebService SOAP. Avaliação de transações a partir do sistema de antifraude.</li>
+            <li>GTR TEF: Suporte técnico ao sistema TEF Getnet. Manutenção de extratos eletrônicos, movimentação financeira no nível mais detalhado.</li>
+            <li>Auttar: Suporte ao sistema integrador de transações TEF, contato direto com o cliente e distribuidores.</li>
+          </ul>
+        </div>
+    
+        <div class="exp">
+          <h1>NOC (Network Operations Center)</h1>
+          <h3>Getnet Dez/2019 a Ago/2020</h3>
+          <ul>
+            <li>Monitoria ambiente transacional, de hosts internos como servidores, apns, switchs, routers, conexões com parceiros e aplicações externas e internas.</li>
+            <li>Controle da schedulagem de jobs na ferramenta Control-M.</li>
+            <li>Rotina de suporte aos servidores em ambientes produtivos, homologação e desenvolvimento, de acordo com a necessidade do alerta.</li>
+            <li>Centralização e controle do andamento dos incidentes em produção, auxiliando nas solicitações da gestão, contatando os responsáveis técnicos e registrando as informações.</li>
+          </ul>
+        </div>
+        
+        <div class="exp">
+          <h1>Analista de Suporte JR</h1>
+          <h3>Getnet Ago/2020 a Nov/2020</h3>
+          <p>Mudança de cargo na equipe de NOC, mantendo as funções.</p>
+        </div>
+        
+        <div class="exp">
+          <h1>Analista de TI</h1>
+          <h3>Getnet Dez/2020 - </h3>
+          <p>Atuando na mesa Ágil de TEF, realizando certificação de soluções de TEF das principais integradoras de TEF do mercado, Auttar, Software Express, VBI, OKI(NCR), Linx e Pay&Go, baseado na ISO 8583. Realizamos também certificação de equipamentos junto as principais bandeiras do mercado, Mastercard, Visa, Elo e Amex.</p>
+        </div>
+        
+      </div>
+    </div>
+
+
+  </div>
+  <script>
+    var sobre = document.getElementById("sobre");
+    var escolaridade = document.getElementById("escolaridade");
+    var experiencias = document.getElementById("experiencias");
+
+    escolaridade.style.display = "none";
+    sobre.style.display = "none";
+    experiencias.style.display = "none";
+    
+    function ShowSobre(){
+      sobre.style.display = "inline";
+      experiencias.style.display = "none";
+      escolaridade.style.display = "none";
+      $('html, body').animate({scrollTop:0}, 'slow');
+    }
+
+    function ShowEscolaridade(){
+      escolaridade.style.display = "inline";
+      sobre.style.display = "none";
+      experiencias.style.display = "none";
+      $('html, body').animate({scrollTop:0}, 'slow');
+    }
+    
+    function ShowExperiencias(){
+      experiencias.style.display = "inline";
+      escolaridade.style.display = "none";
+      sobre.style.display = "none";
+      $('html, body').animate({scrollTop:0}, 'slow');
+    }
+
+
+  </script>
+  
+
+</body>
+</html>

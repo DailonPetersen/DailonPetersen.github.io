@@ -1,0 +1,41 @@
+body {
+    padding: 0px;
+    margin: 0px;  
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+  }
+
+  .quadro{
+    padding: 0px;
+    margin:auto;
+    width: 85vw;
+    
+    background-color: white;
+    position: absolute;
+  }
+  .lateral{
+    position: relative;
+    border-width:2px;
+    background-color: red;
+    float: left;
+    width: 20vw;
+    height: 100vh; 
+  }
+  .lateral .cabecalho{
+    padding: 20px;
+    text-align: center;
+  }
+  .lateral .cabecalho img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
+  }
+  .conteudo{
+    width: 80vw;
+    position:relative;
+    border-width:2px;
+    background-color: peachpuff;
+    float: left;
+  }
