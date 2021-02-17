@@ -95,10 +95,13 @@
       animation-name: conteudo;
       animation-duration: 3s;
     }
+    .conteudo ul,li{
+      list-style: none;
+    }
     .conteudo .sobre{
       margin-top: 20px;
       padding: 0px;
-      margin: 20px;
+      margin-top: 20px;
       text-align: center;
       font-size: larger;
     }
@@ -107,9 +110,6 @@
       padding: 0px;
       text-align: center;
       font-size: larger;
-    }
-    ul li{
-      text-align: justify;
     }
 
     .conteudo .escolaridade{
@@ -134,11 +134,47 @@
       height: 5vh;
     }
 
-    button:hover{
-      font-size: larger;
+    .botoes :hover{
+      font-size: 30px;
+      background: rgb(255,246,252) !important;
+      background: linear-gradient(3deg, rgba(255,246,252,0.1) 0%, rgba(89,193,237,0.8) 100%) !important;
+      
     }
 
+    @media only screen
+      and (min-device-width : 320px)
+      and (max-device-width : 600px) {
+        .quadro{
+          padding: 0px;
+          margin: 50px 0px;
+          width: 90vw;
+        }
+        .lateral{
+          height: auto;
+          float: left;
+          width: 90vw;
+        }
+        .lateral .cabecalho img{
+          width: 50%;
+        }
+        .lateral .cabecalho h3{
+          font-size: larger;
+        }
+        .lateral .cabecalho h4 {
+          font-size: larger;
+        }
+        .conteudo{
+          margin: auto;
+          width: 90vw;
+        }
 
+        .botoes :hover{
+          font-size: 20px;
+          background: rgb(255,246,252) !important;
+          background: linear-gradient(3deg, rgba(255,246,252,0.1) 0%, rgba(89,193,237,0.8) 100%) !important;
+          
+        }
+    }
 
   </style>
 
