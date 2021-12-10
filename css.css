@@ -1,41 +1,180 @@
-body {
-    padding: 0px;
-    margin: 0px;  
-    background-color: brown;
-    display: flex;
-    justify-content: center;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,300;0,400;1,300;1,400;1,700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  .quadro{
-    padding: 0px;
-    margin:auto;
-    width: 85vw;
-    
-    background-color: white;
-    position: absolute;
-  }
-  .lateral{
-    position: relative;
-    border-width:2px;
-    background-color: red;
-    float: left;
-    width: 20vw;
-    height: 100vh; 
-  }
-  .lateral .cabecalho{
-    padding: 20px;
-    text-align: center;
-  }
-  .lateral .cabecalho img{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    
-  }
-  .conteudo{
-    width: 80vw;
-    position:relative;
-    border-width:2px;
-    background-color: peachpuff;
-    float: left;
-  }
+body {
+  margin: 0 auto;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 20vh 20vw;
+  background: rgb(15,129,238);
+  background: linear-gradient(322deg, rgba(15,129,238,0.9895308465182948) 0%, rgba(0,16,94,1) 100%);
+}
+
+#top {
+  font-family: 'Merriweather';
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: white;
+  text-align: right;
+  margin-right: 15px;
+}
+
+.slider {
+  border-radius: 25px;
+  box-shadow: -7px 0px 5px 0px #0e194bc0;
+}
+
+#bottom {
+  margin-left: 15px;
+  color: white;
+}
+
+#aside {
+  grid-area: aside;
+  font-family: 'Be Vietnam Pro';
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -7px 0px 10px 1px #aaaaaa;
+  position:relative;
+}
+
+#aside ul {
+  list-style: none;
+} 
+
+#aside li {
+  margin-bottom: 50px;
+}
+
+#main {
+  grid-area: main;
+  font-family: 'Be Vietnam Pro';
+}
+
+.slider {
+  text-align: center;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-areas:
+    "main aside";
+  padding: 0;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  background-color: #EAEAEA;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+#aside {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #F0F0F0;
+}
+
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slides>div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+  height: 50vh;
+  padding: 3vw;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider a {
+  display: inline-flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  font-size: larger;
+  color: #3e3e3e;
+}
+
+.slider a:hover {
+  color: gray;
+}
+
+.slider:active {
+  top: 1px;
+}
+
+.slider:focus {
+  background: #000;
+}
+        
+#slide-1 h1 {
+  font-size: 40px;
+}
+#slide-1 p {
+  font-size: 20px;
+  text-align: justify;
+}
+.escolaridade, #slide-3 {
+  margin: auto;
+  height: 100%;
+  font-size: 10px;
+}
+#slide-2 {
+  display: inline;
+}
+#slide-2 div.exp p{
+  text-align: justify;
+  font-size: 18px;
+  margin: auto;
+}
+#slide-2 div {
+  margin-bottom: 35px;
+}
+#slide-2 div.exp h1 {
+  font-size: 25px;
+}
+#slide-2 div.exp h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+#slide-3 {
+  height: 100%;
+}
+
+#slide-3 .escolaridade h1{
+  font-size: 25px;
+}
+
+#slide-3 .escolaridade h3{
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+#slide-3 .escolaridade p {
+  text-align: justify;
+  font-size: 20px;
+  margin: auto;
+}

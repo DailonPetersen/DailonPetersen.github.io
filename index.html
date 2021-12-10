@@ -1,308 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dailon Petersen</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Buda:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portifolio</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-  <style>
-    @keyframes conteudo {
-      from{opacity: 0;}
-      to{opacity: 1;}
-    }
-
-    body {
-      height: 100%;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      margin: 0;  
-      display: flex;
-      justify-content: center;
-      background: rgb(154,225,255);
-      background: linear-gradient(0deg, rgba(154,225,255,1) 0%, rgba(0,57,94,1) 100%) fixed;
-    }
-    
-    .quadro{
-      padding: 0px;
-      margin: 70px 0px;
-      width: 85vw;      
-
-    }
-    .lateral{
-      background: rgb(225,246,252);
-      background: linear-gradient(87deg, rgba(225,246,252,0.1) 0%, rgba(154, 225, 255, 0.8) 49%, rgba(233,246,251,0.1) 100%);
-      position: relative;
-      border-width:2px;
-      float: left;
-      width: 20vw;
-      height: auto;
-    }
-    .lateral .cabecalho{
-      color: white;
-      position: relative;
-      padding: 20px;
-      text-align: center;
-    }
-    .lateral .cabecalho img{
-      width: 80%;
-      height: auto;
-      border-radius: 50%;   
-    }
-    .lateral .cabecalho h1{
-      font-family: 'Contrail One';
-      font-size: 40px;
-      text-shadow: 2px 2px 2px #007db1;
-    }
-    .lateral .cabecalho h3{
-      font-family: 'Buda';
-      font-style: italic;
-      font-weight: 1000;
-      font-size: 30px;
-      text-shadow: 2px 2px 2px #007db1;
-    }
-    .lateral .cabecalho h4{
-      font-family: 'Buda';
-      font-style: italic;
-      font-size: 1.3vw;
-      text-shadow: 2px 2px 2px #007db1;
-    }
-    .conteudo{
-      padding: 0px;
-      width: 65vw;
-      opacity: 1;
-      background: rgb(154,225,255);
-      background: linear-gradient(0deg, rgba(154,225,255,1) 0%, rgba(0,57,94,1) 100%) fixed;
-      border-radius: 10px;
-      border: solid white;
-      border-width: 0 2px;
-      float: right;
-      color: white;
-      transition: opacity 1s ease-in-out;
-    }
-    .conteudo h1{
-      animation-name: conteudo;
-      animation-duration: 2s;
-      font-family: 'Buda';
-    }
-    .conteudo h3, p, ul, li{
-      text-align: center;
-      animation-name: conteudo;
-      animation-duration: 3s;
-    }
-    .conteudo ul,li{
-      list-style: none;
-    }
-    .conteudo .sobre{
-      margin-top: 20px;
-      padding: 0px;
-      margin-top: 20px;
-      text-align: center;
-      font-size: larger;
-    }
-    .conteudo .experiencias{
-      margin-top: 20px;
-      padding: 0px;
-      text-align: center;
-      font-size: larger;
-    }
-
-    .conteudo .escolaridade{
-      margin-top: 20px;
-      padding: 0px;
-      text-align: center;
-    }
-
-    button{
-      display: block;
-      width: 100%;
-      transition: font-size 1s;
-      margin: 0;
-      padding: 0;
-      font-family: 'Baloo Da';
-      font-size: larger;
-      color: white;
-      background: rgb(225,246,252);
-      background: linear-gradient(87deg, rgba(225,246,252,0.1) 0%, rgba(154, 225, 255, 0.8) 49%, rgba(233,246,251,0.1) 100%);
-      text-shadow: 2px 2px 2px #007db1;
-      border: none;
-      height: 5vh;
-    }
-
-    .botoes :hover{
-      background: rgb(255,246,252) !important;
-      background: linear-gradient(3deg, rgba(255,246,252,0.1) 0%, rgba(89,193,237,0.8) 100%) !important;
-      
-    }
-
-    @media only screen
-      and (min-device-width : 320px)
-      and (max-device-width : 900px) {
-        .quadro{
-          padding: 0px;
-          margin: 50px 0px;
-          width: 90vw;
-        }
-        .lateral{
-          height: auto;
-          float: left;
-          width: 90vw;
-        }
-        .lateral .cabecalho img{
-          width: 50%;
-        }
-        .lateral .cabecalho h3{
-          font-size: larger;
-        }
-        .lateral .cabecalho h4 {
-          font-size: larger;
-        }
-        .conteudo{
-          margin: auto;
-          width: 90vw;
-        }
-
-        .botoes :hover{
-          background: rgb(255,246,252) !important;
-          background: linear-gradient(3deg, rgba(255,246,252,0.1) 0%, rgba(89,193,237,0.8) 100%) !important;
-          
-        }
-    }
-
-  </style>
-
-             
 </head>
+
 <body>
-  
-  <div class="quadro">
-    <div class="lateral w3-center w3-animate-left">
-      <div class="cabecalho ">
-        <img src="eu.jpg" width="200" height="200">
-        <h1>Dailon Petersen</h1>
-        <h3>Analista de TI em Getnet e viciado em café</h3>
-        <h4>fernandodailon@gmail.com</h4>
-        <h4>(51)99553-0388</h4>
-      </div>
 
-      <div class="botoes">
-        <button onclick="ShowExperiencias()">Experiencias Profissionais</button>
-        <button onclick="ShowEscolaridade()">Escolaridade</button>
-        <button onclick="ShowSobre()">Sobre</button>
-      </div>
-    </div>
+    <header id="top">
+        <h2>Dailon Petersen's Portfolio</h2>
+    </header>
+    <div class="slider">
+        <aside id="aside">
+            <ul class="list">
+                <li class="item_list"><a href="#slide-1">About me</a></li>
+                <li class="item_list"><a href="#slide-2">Career</a></li>
+                <li class="item_list"><a href="#slide-3">Escolarity</a></li>
+            </ul>
+        </aside>
+        <main id="main">
+            <div class="slides">
+                <div id="slide-1">
+                    <div class="sobre" id="sobre">
+                        <h1>About me</h1>
+                        <p>
+                          I was born and raised in Campo Bom city on RS, with 23 years old, youngest of three child, have two older sisters.
+                          Graduated in Analysis and Development of Systems on Ftec Faculdades - Novo Hamburgo.
+                        </p>
+                      </div>
+                </div>
+                <div id="slide-2">                  
+                    <div class="exp">
+                        <h1>Jr. IT Analyst</h1>
+                        <h3>since Getnet Dez/2020</h3>
+                        <p>
+                        Currently, i'm integrant of a team where the main work is develop the technical documentation to receive eft(electronic funds transfer) transactions message based on ISO8583.
+                        We certificate this sofwares developed based on our documentation, and also certificate the new POS equipaments that we'll offer to the customers.
+                        Helping in some Android projects where we develop mobile POS-EFT applications. Working with Kotlin and MVVM Architecture.
+                        </p>
+                    </div>
+                
+                    <div class="exp">
+                        <h1>NOC / Jr. Support Analyst</h1>
+                        <h3>Getnet Dez/2019 a Dez/2020</h3>
+                        <p>
+                            Monitored the hosts that make up the transactional, production, test and development enviroments.
+                            Created and controlled the job schedule in Control-M.
+                            Rotine of support to host like, rotate, capture, delete logs. Restart services, maintenace on weblogics.
+                            Centralized and controlled information about incidents in the production enviroment. Helped and called the responsables managers and technical people.
+                        </p>
+                    </div>
 
-    <div class="conteudo">
-      <div class="sobre" id="sobre">
-        <h1 class="">Sobre mim</h1>
-        <p  class="">
-          Nascido e criado em Campo Bom - RS,com 22 anos sou o caçula de duas irmãs, estudante de escola publica, me formei em Análise e Desenvolvimento de Sistemas pela Faculdade Ftec - Novo Hamburgo.
-        </p>
-      </div>
+                    <div class="exp">
+                        <h1>Technical Backoffice Assistant</h1>
+                        <h3>Getnet Jun/2018 a Dez/2019</h3>
+                        <p>Supporting three products, EFT, EFT Auttar and eCommerce.</p>
+                        <p>EFT - Support to Eletronic Founds Transfer authorization systems. Worked with analysis on electronic extracts too, document that represents all transactions of customer.</p>
+                        <p>eCommerce - Support to API to developers who want to integrate with Plataforma Digital(name of product).</p>
+                        <p>EFT Auttar - Supporting to concentrator EFT transactions named Auttar, it's the own Getnet EFT System. </p>
+                    </div>
+                </div>
+                <div id="slide-3">
+                    <div class="escolaridade" id="escolaridade">
+                        <h1>Analysis and Development of Systems</h1>
+                        <h3>Ftec Faculdades Novo Hamburgo - 2017/2 a 2020/2</h3>
+                        <h1>Knowledge / Habilitys</h1>
+                            <p>
+                                I'm always try to improve my english, that i consider intermeditate/advanced english. I'm able to understand and make a conversation but still have some difficulties.
+
+                                Recently i start to programm on Kotlin to Android enviroment, and i found my sweet place, where is easy to spend some hours in front of PC, so i would like to work in that area in the future.
+
+                                On my job, i work with EMV and other payments tecnologies. 
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>    
     
-      <div class="escolaridade" id="escolaridade">
-        <h1>Análise e Desenvolvimento de Sistemas</h1>
-        <h3>Ftec Faculdades Novo Hamburgo - 2017/2 a 2020/2</h3>
-        <hr>
-        <h1>Habilidades</h1>
-          <p>hardware Básico</p>
-          <p>Administração</p>
-        </ul>
-      </div>
-    
-      <div class="experiencias" id="experiencias">
-        <div class="exp">
-            <h1 class="">Jovem Aprendiz</h1>
-            <h3 class="">Getnet - Out/2014 a Jan/2016</h3>
-          <p class="">
-            Jovem Aprendiz na área de Planejamento da Central de Relacionamento Toque Fale, auxiliando no controle de EPI's, também como outras demandas de manutenção de base de dados e chamados de manutenção
-            da infraestrutura.
-          </p>
-        </div>
-    
-        <div class="exp">
-          <h1>Agente de Call Center</h1>
-          <h3>Toque Fale - Getnet Jan/2017 a Mai/2018</h3>
-          <p>
-            Atuando na área financeira, manutenção técnica de POS, atendimento via chat, atendente de Gerentes Jurídicos Santander e atendimento diferenciado de grandes clientes.
-          </p>
-        </div>  
-    
-        <div class="exp">
-          <h1>Assistente de Backoffice Técnico</h1>
-          <h3>Toque Fale - Getnet Jun/2018 a Nov/2019</h3>
-          <ul>
-            <li>Ecommerce: Suporte à Plataforma Digital Getnet. Atuando como suporte técnico aos desenvolvedores. Dispomos de uma solução de pagamento completa, oferecida através de integração via API REST e WebService SOAP. Avaliação de transações a partir do sistema de antifraude.</li>
-            <li>GTR TEF: Suporte técnico ao sistema TEF Getnet. Manutenção de extratos eletrônicos, movimentação financeira no nível mais detalhado.</li>
-            <li>Auttar: Suporte ao sistema integrador de transações TEF, contato direto com o cliente e distribuidores.</li>
-          </ul>
-        </div>
-    
-        <div class="exp">
-          <h1>NOC - Operador de monitoramento</h1>
-          <h3>Getnet Dez/2019 a Ago/2020</h3>
-          <ul>
-            <li>Monitoria ambiente transacional, de hosts internos como servidores, apns, switchs, routers, conexões com parceiros e aplicações externas e internas.</li>
-            <li>Controle da schedulagem de jobs na ferramenta Control-M.</li>
-            <li>Rotina de suporte aos servidores em ambientes produtivos, homologação e desenvolvimento, de acordo com a necessidade do alerta.</li>
-            <li>Centralização e controle do andamento dos incidentes em produção, auxiliando nas solicitações da gestão, contatando os responsáveis técnicos e registrando as informações.</li>
-          </ul>
-        </div>
-        
-        <div class="exp">
-          <h1>Analista de Suporte JR</h1>
-          <h3>Getnet Ago/2020 a Nov/2020</h3>
-          <p>Mudança de cargo na equipe de NOC, mantendo as funções.</p>
-        </div>
-        
-        <div class="exp">
-          <h1>Analista de TI</h1>
-          <h3>Getnet Dez/2020 - </h3>
-          <p>Atuando na mesa Ágil de TEF, realizando certificação de soluções de TEF das principais integradoras de TEF do mercado, Auttar, Software Express, VBI, OKI(NCR), Linx e Pay&Go, baseado na ISO 8583, também como no desenvolvimento da Especificação técnica TEF Getnet. Realizamos também certificação de equipamentos junto as principais bandeiras do mercado, Mastercard, Visa, Elo e Amex.</p>
-        </div>
-        
-      </div>
-    </div>
+    <footer id="bottom">
+        <p>Developed using CSS e JS - 2021</p>
+    </footer>
+
+    <script> 
+        $(document).ready(function() {
+            document.getElementById("slide-2").style.overflow = "hidden"
+        })
 
 
-  </div>
-  <script>
-    var sobre = document.getElementById("sobre");
-    var escolaridade = document.getElementById("escolaridade");
-    var experiencias = document.getElementById("experiencias");
+        $("li").click(function(e) {
+            if (e.target.text == "About me") {
+                document.getElementById("slide-2").style.overflow = "hidden"
+            } else if (e.target.text == "Escolarity") {
+                document.getElementById("slide-2").style.overflow = "hidden"
+            } else if (e.target.text == "Career") {
+                document.getElementById("slide-2").style.overflow = "initial"
+            }
+        });
 
-    escolaridade.style.display = "none";
-    sobre.style.display = "none";
-    experiencias.style.display = "none";
-    
-    function ShowSobre(){
-      sobre.style.display = "inline";
-      experiencias.style.display = "none";
-      escolaridade.style.display = "none";
-      //$('html, body').animate({scrollTop:0}, 'slow');
-    }
+        let slide1 = document.getElementById("slide-1")
+        let slide2 = document.getElementById("slide-2")
+        let slide3 = document.getElementById("slide-3")
 
-    function ShowEscolaridade(){
-      escolaridade.style.display = "inline";
-      sobre.style.display = "none";
-      experiencias.style.display = "none";
-      //$('html, body').animate({scrollTop:0}, 'slow');
-    }
-    
-    function ShowExperiencias(){
-      experiencias.style.display = "inline";
-      escolaridade.style.display = "none";
-      sobre.style.display = "none";
-      //$('html, body').animate({scrollTop:0}, 'slow');
-    }
-
-
-  </script>
-  
-
+    </script>
 </body>
+
 </html>
