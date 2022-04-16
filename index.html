@@ -8,107 +8,49 @@
     <title>My portifolio</title>
     <link rel="stylesheet" href="css.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
-
-    <header id="top">
-        <h2>Dailon Petersen's Portfolio</h2>
-    </header>
-    <div class="slider">
+    <h2 id="top">Dailon Petersen's Portfolio</h2>
+    <div class="slider" class="container">
         <aside id="aside">
-            <ul class="list">
-                <li class="item_list"><a href="#slide-1">About me</a></li>
-                <li class="item_list"><a href="#slide-2">Career</a></li>
-                <li class="item_list"><a href="#slide-3">Escolarity</a></li>
-            </ul>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#slide1" onclick="trocaSlide('slide-1')">About me</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#slide2" onclick="trocaSlide('slide-2')">Career</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#slide3" onclick="trocaSlide('slide-3')">Escolarity</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
         </aside>
         <main id="main">
             <div class="slides">
-                <div id="slide-1">
-                    <div class="sobre" id="sobre">
-                        <h1>About me</h1>
-                        <p>
-                          I was born and raised in Campo Bom city on RS, with 23 years old, youngest of three child, have two older sisters.
-                          Graduated in Analysis and Development of Systems on Ftec Faculdades - Novo Hamburgo.
-                        </p>
-                      </div>
-                </div>
-                <div id="slide-2">                  
-                    <div class="exp">
-                        <h1>Jr. IT Analyst</h1>
-                        <h3>since Getnet Dez/2020</h3>
-                        <p>
-                        Currently, i'm integrant of a team where the main work is develop the technical documentation to receive eft(electronic funds transfer) transactions message based on ISO8583.
-                        We certificate this sofwares developed based on our documentation, and also certificate the new POS equipaments that we'll offer to the customers.
-                        Helping in some Android projects where we develop mobile POS-EFT applications. Working with Kotlin and MVVM Architecture.
-                        </p>
-                    </div>
-                
-                    <div class="exp">
-                        <h1>NOC / Jr. Support Analyst</h1>
-                        <h3>Getnet Dez/2019 a Dez/2020</h3>
-                        <p>
-                            Monitored the hosts that make up the transactional, production, test and development enviroments.
-                            Created and controlled the job schedule in Control-M.
-                            Rotine of support to host like, rotate, capture, delete logs. Restart services, maintenace on weblogics.
-                            Centralized and controlled information about incidents in the production enviroment. Helped and called the responsables managers and technical people.
-                        </p>
-                    </div>
-
-                    <div class="exp">
-                        <h1>Technical Backoffice Assistant</h1>
-                        <h3>Getnet Jun/2018 a Dez/2019</h3>
-                        <p>Supporting three products, EFT, EFT Auttar and eCommerce.</p>
-                        <p>EFT - Support to Eletronic Founds Transfer authorization systems. Worked with analysis on electronic extracts too, document that represents all transactions of customer.</p>
-                        <p>eCommerce - Support to API to developers who want to integrate with Plataforma Digital(name of product).</p>
-                        <p>EFT Auttar - Supporting to concentrator EFT transactions named Auttar, it's the own Getnet EFT System. </p>
-                    </div>
-                </div>
-                <div id="slide-3">
-                    <div class="escolaridade" id="escolaridade">
-                        <h1>Analysis and Development of Systems</h1>
-                        <h3>Ftec Faculdades Novo Hamburgo - 2017/2 a 2020/2</h3>
-                        <h1>Knowledge / Habilitys</h1>
-                            <p>
-                                I'm always try to improve my english, that i consider intermeditate/advanced english. I'm able to understand and make a conversation but still have some difficulties.
-
-                                Recently i start to programm on Kotlin to Android enviroment, and i found my sweet place, where is easy to spend some hours in front of PC, so i would like to work in that area in the future.
-
-                                On my job, i work with EMV and other payments tecnologies. 
-                            </p>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </main>
     </div>    
-    
-    <footer id="bottom">
-        <p>Developed using CSS e JS - 2021</p>
-    </footer>
 
     <script> 
-        $(document).ready(function() {
-            document.getElementById("slide-2").style.overflow = "hidden"
-        })
+        window.onload = trocaSlide("slide-1")
+        function trocaSlide(slide) {
+            if(slide == "slide-1") {
+                $(".slides").load("slide1.html");
+            } else if(slide == "slide-2") {
+                $(".slides").load("slide2.html");
 
-
-        $("li").click(function(e) {
-            if (e.target.text == "About me") {
-                document.getElementById("slide-2").style.overflow = "hidden"
-            } else if (e.target.text == "Escolarity") {
-                document.getElementById("slide-2").style.overflow = "hidden"
-            } else if (e.target.text == "Career") {
-                document.getElementById("slide-2").style.overflow = "initial"
+            } else if(slide == "slide-3") {
+                $(".slides").load("slide3.html");
             }
-        });
-
-        let slide1 = document.getElementById("slide-1")
-        let slide2 = document.getElementById("slide-2")
-        let slide3 = document.getElementById("slide-3")
-
+        }
     </script>
 </body>
 

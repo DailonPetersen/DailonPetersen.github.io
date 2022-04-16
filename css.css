@@ -1,180 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300;1,400;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,300;0,400;1,300;1,400;1,700&display=swap');
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
-body {
-  margin: 0 auto;
-  height: 100vh;
-  max-height: 100vh;
-  padding: 20vh 20vw;
-  background: rgb(15,129,238);
-  background: linear-gradient(322deg, rgba(15,129,238,0.9895308465182948) 0%, rgba(0,16,94,1) 100%);
+html {
+  width: 100%;
+  height: 100%;
 }
-
+body {
+  margin: auto;
+  padding: auto;
+  width: 100vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background: linear-gradient(322deg, rgba(238, 15, 15, 0.99) 0%, rgb(94, 0, 0) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
 #top {
   font-family: 'Merriweather';
-  font-weight: 900;
   font-style: italic;
-  font-size: 1.2rem;
   color: white;
-  text-align: right;
-  margin-right: 15px;
+  width: 80vw;
+  margin: auto;
+  text-align: end;
 }
-
 .slider {
-  border-radius: 25px;
-  box-shadow: -7px 0px 5px 0px #0e194bc0;
+  margin: 0 auto;
+  width: 80vw;
 }
-
-#bottom {
-  margin-left: 15px;
-  color: white;
+.slider a {
+  font-size: larger;
 }
-
-#aside {
-  grid-area: aside;
-  font-family: 'Be Vietnam Pro';
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: -7px 0px 10px 1px #aaaaaa;
-  position:relative;
+.slider #aside nav{
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
-
-#aside ul {
-  list-style: none;
-} 
-
-#aside li {
-  margin-bottom: 50px;
+.slider #main {
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
-
-#main {
-  grid-area: main;
-  font-family: 'Be Vietnam Pro';
+.slides>div> .exp:not(:last-child) {
+  margin-bottom: 6vh;
 }
-
-.slider {
-  text-align: center;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 80% 20%;
-  grid-template-areas:
-    "main aside";
+.slides>div> .exp ul {
   padding: 0;
 }
-
-.slides {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  background-color: #EAEAEA;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-}
-
-#aside {
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
-  background-color: #F0F0F0;
-}
-
-.slides::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-.slides::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.slides>div {
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  width: 100%;
-  height: 50vh;
-  padding: 3vw;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.slider a {
-  display: inline-flex;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  position: relative;
-  font-size: larger;
-  color: #3e3e3e;
-}
-
-.slider a:hover {
-  color: gray;
-}
-
-.slider:active {
-  top: 1px;
-}
-
-.slider:focus {
-  background: #000;
-}
-        
-#slide-1 h1 {
-  font-size: 40px;
-}
-#slide-1 p {
-  font-size: 20px;
+.slides>div>div> p, ul {
+  font-family: 'Be Vietnam Pro';
   text-align: justify;
+  font-size: large;
+  width: 96%;
+  padding-left: 20px;
 }
-.escolaridade, #slide-3 {
-  margin: auto;
-  height: 100%;
-  font-size: 10px;
+.slides>div> .exp ul li {
+  list-style: none;
+  padding-left: 20px;
 }
-#slide-2 {
-  display: inline;
-}
-#slide-2 div.exp p{
-  text-align: justify;
-  font-size: 18px;
-  margin: auto;
-}
-#slide-2 div {
-  margin-bottom: 35px;
-}
-#slide-2 div.exp h1 {
-  font-size: 25px;
-}
-#slide-2 div.exp h3 {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-#slide-3 {
-  height: 100%;
-}
-
-#slide-3 .escolaridade h1{
-  font-size: 25px;
-}
-
-#slide-3 .escolaridade h3{
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-
-#slide-3 .escolaridade p {
-  text-align: justify;
-  font-size: 20px;
-  margin: auto;
+#slide-1, #slide-2, #slide-3 {
+  padding: 3%;
 }
