@@ -28,6 +28,9 @@
                       <li class="nav-item">
                         <a class="nav-link" href="#slide3" onclick="trocaSlide('slide-3')">Escolarity</a>
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#slide4" onclick="trocaSlide('slide-4')">Jobs</a>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -41,14 +44,17 @@
 
     <script> 
         window.onload = trocaSlide("slide-1")
+
+
         function trocaSlide(slide) {
             if(slide == "slide-1") {
                 $(".slides").load("slide1.html");
             } else if(slide == "slide-2") {
                 $(".slides").load("slide2.html");
-
             } else if(slide == "slide-3") {
                 $(".slides").load("slide3.html");
+            } else if(slide == "slide-4") {
+                $(".slides").load("slide4.html");
             }
         }
     </script>
